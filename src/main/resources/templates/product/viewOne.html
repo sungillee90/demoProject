@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Create</title>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Page Content goes here -->
+
+    <h1 class="center-align" >Product</h1>
+
+    <h3 class="center-align" th:text="${product.getName()}"></h3>
+
+    <p class="center-align" th:text="${product.getDescription()}" ></p>
+
+    <p class="center-align" >$<span th:text="${product.getPrice()}"></span></p>
+
+    <img class="center-align" th:src="${product.getImg()}" alt="img">
+
+    <a class="center-align" th:href="'/product/'+ ${product.getId() +'/edit'}">Edit</a>
+
+    <a class="center-align" th:href="'/product/'+ ${product.getId() +'/delete'}">Delete</a>
+</div>
+</body>
+</html>
